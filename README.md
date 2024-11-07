@@ -67,4 +67,4 @@ We welcome contributions to this project! If you have any ideas, bug fixes, or i
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [Apache-2.0 license](LICENSE).
