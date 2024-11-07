@@ -1,6 +1,5 @@
-
 import tensorflow as tf
-from tensorflow.keras import layers, models
+from tensorflow.keras import layers, models, Sequential
 from tensorflow.keras.applications import ResNet50
 from pathlib import Path
 import gdown
@@ -25,6 +24,11 @@ def loadModel():
     
     # Build the model
     model = models.Model(inputs, embedding, name="ArcFaceModel")
+
+    # Workaround: Re-creating the model as a sequential copy
+    new_model = Sequential()
+    for layer in model.layers:
+        new_model.add(layer)
     
     # Define the URL and path for downloading pretrained ArcFace weights if available
     home = str(Path.home())
@@ -40,10 +44,10 @@ def loadModel():
     
     # Load weights if available
     try:
-        model.load_weights(output)
+        new_model.load_weights(output)
         print("Pre-trained weights loaded successfully.")
     except Exception as e:
         print("Pre-trained weights could not be loaded:", e)
         print(f"Please download manually from {url} and place it at {output}.")
     
-    return model
+    return new_model
