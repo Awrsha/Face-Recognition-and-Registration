@@ -31,7 +31,7 @@ To get started with the Face Verification project, follow these steps:
    - Ensure you have access to a compatible GPU (NVIDIA) and the necessary CUDA libraries installed.
 
 3. **Prepare the Dataset**:
-   - Download the LFW (Labeled Faces in the Wild) dataset and place it in the `lfw` directory.
+   - Download the LFW [Labeled Faces in the Wild](https://www.kaggle.com/datasets/jessicali9530/lfw-dataset) dataset and place it in the `lfw` directory.
    - Organize your own face data into a directory structure with each person's images in a separate subdirectory (e.g., `dataset/Person1`, `dataset/Person2`, etc.).
 
 4. **Train the Model**:
