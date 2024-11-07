@@ -1,0 +1,10 @@
+facenet_pytorch==2.5.2
+torch==1.12.1
+torchvision==0.13.1
+numpy==1.23.5
+opencv-python==4.6.0.66
+tqdm==4.64.1
+Pillow==9.3.0
+tensorboard==2.11.0
+google-colab==1.0.0
+matplotlib==3.6.2
